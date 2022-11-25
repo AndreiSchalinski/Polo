@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--css bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--scripts javascript bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+  <!--css_estilização-->
+  <link rel="stylesheet" href="/polo/estilizacao/estilizacao-menu.css">
+  <link rel="stylesheet" href="/polo/estilizacao/estilizacao-modais.css">
+  <link rel="stylesheet" href="/polo/estilizacao/estilizacao-responsiva.css">
+  <link rel="stylesheet" href="/polo/estilizacao/estilizacao-bot-perso.css">
+  <!--carousel de cursos owl-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!--carousel de cursos owl-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--scripts de botoes eventos-->
+  <script src="/polo/script/script-uri-sistema.js"></script>
+  <script src="/polo/script/script-form-cad-curso.js"></script>
+  <script src="/polo/script_restfull/crud_usuario.js"></script>
+  <script src="/polo/script_restfull/crud_curso.js"></script>
+  <script src="/polo/script_restfull/crud_categoria.js"></script>
+  <script src="/polo/script/script-botoes.js"></script>
+  <script src="/polo/script/scripts-dir-modais.js"></script>
+  <script src="/polo/script/script-sections-load.js"></script>
+  <script src="/polo/script/script-form-cad.js"></script>
+  <script src="/polo/script/validaCampos.js"></script>
+  <script src="/polo/script_restfull/crud_modulo.js"></script>
+  <script src="/polo/script_restfull/script-render-videos.js"></script>
+  <script src="/polo/script-carregar-cursos/script-carregar-cursos-modal.js"></script>
+  <script src="/polo/script-carregar-cursos/script-carregar-cursos-liberados.js"></script>
+  <script src="/polo/script-carregar-cursos/script-carregar-atividades-curso.js"></script>
+  <script src="/polo/script-carregar-cursos/script-carregar-cursos-concluidos.js"></script>
+  <script src="/polo/script-carregar-cursos/script-carregar-dashboard.js"></script>
+  <script src="/polo/script-carregar-cursos/script-comprar-curso.js"></script>
+  <!--fonte do google-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!--Jquery UI-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+  <!--icones bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="icon" type="image/jpg" href="/polo/polo/imagens/Logo Santorini.png" />
+  <title>Santorini Educacional</title>
+</head>
+
+<body>
+  <section id="conteudo-section">
+    <section id="amb-frase-motivacional">
+      <p>Educar é nossa maior inspiração</p>
+    </section>
+    <header style="box-shadow: inset 0px -10px 10px -10px rgba(5, 20, 223, 0.35);">
+      <div class="amb-logoCompletoEditora" style="box-shadow: inset 0px -10px 10px -10px rgba(5, 20, 223, 0.35);">
+        <ul class="lista-cabecalho-editora" onclick="window.location.reload(true)" style="cursor: pointer;">
+          <li><img src="/polo/imagens/Logo Santorini.png" alt="logo da editaroa"></li>
+          <li>
+            <h4>Santorini</h4>
+          </li>
+          <li>
+            <p style="text-shadow: 0 0 5px rgba(255, 255, 255, 0.267);">Educacional</p>
+          </li>
+        </ul>
+        <ul class="amb-botao-hamburguer">
+          <li style="display: flex; align-items: center;">
+            <h5 id="tituloBotHam" style="margin-top: 5px; font-weight: bold; font-size: 16px;">MENU</h5><button
+              id="btn-mobile"><span id="hamburguer"></span></button>
+          </li>
+        </ul>
+      </div>
+      <ul class="amb-usuario-logado">
+        <li>
+          <div class="dropdown">
+            <button class="btn-config-usuario btn dropdown-toggle" type="button" id="dropdownMenuButton2"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <p class="token-user" style="color: transparent;"></p>
+              <p id="nomeUsuario2" class="nomeUsuario"></p>
+            </button>
+            <ul class="dropdown-opcoes dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item" href="#" onclick="$('#amb-exibi-conteudo').load('modal_telas/modais_tela_perfil_certificados/modal_minhas_informacoes.html');"><i class="icones bi bi-person-check-fill"></i>Perfil e
+                Certificados</a></li>
+              <!--
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              
+              <li><a class="dropdown-item" href="#"><i class="icones bi bi-chat-square-text-fill"></i>Mensagens</a></li>
+              -->
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#" onclick="USUARIO.buscarPorNome()"><i class="icones bi bi-person-circle"></i>Editar Perfil</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/polo/logout"><i class="icones bi bi-box-arrow-right"></i>Sair</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="user-img"></div>
+        </li>
+      </ul>
+    </header>
+    <main class="main-conteudos">
+      <nav class="nav">
+        <ul class="amb-usuario-logado-responsivo">
+          <li>
+            <div class="user-img"></div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button class="btn-config-usuario-responsivo btn dropdown-toggle" type="button" id="dropdownMenuButton2"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <p class="token-user" style="color: transparent;"></p>
+                <p id="nomeUsuario" class="nomeUsuario"></p>
+              </button>
+              <ul class="dropdown-opcoes-responsivo dropdown-menu dropdown-menu-dark"
+                aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="#" onclick="$('#amb-exibi-conteudo').load('modal_telas/modais_tela_perfil_certificados/modal_minhas_informacoes.html');"><i class="icones bi bi-person-check-fill"></i>Perfil e
+                    Certificados</a></li>
+                    <!--
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                
+                <li><a class="dropdown-item" href="#"><i class="icones bi bi-chat-square-text-fill"></i>Mensagens</a>
+                </li>
+                -->
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#" onclick="USUARIO.buscarPorNome()"><i class="icones bi bi-person-circle"></i>Editar Perfil</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/polo/logout"><i class="icones bi bi-box-arrow-right"></i>Sair</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="botoes-acordion accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="btn-acordion accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <i class="icones bi bi-calendar-check"></i>Meu Aprendizado
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample">
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(1)">Dashboard</button>
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(2)">Planos de Estudo</button>
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(3)">Meus Cursos</button>
+                <!--
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(4)">Atividades</button>
+                -->
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="btn-acordion accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <i class="icones bi bi-journal-bookmark-fill"></i>Conteúdos
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample">
+              <!--
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(5)">Formações</button>
+                -->
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(6)">Edições Santorini</button>
+                
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button class="btn-acordion accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                <i class="icones bi bi-person-check-fill"></i>Perfil e Certificados
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+              data-bs-parent="#accordionFlushExample">
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(7)">Minhas Informações</button>
+              <!--
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(8)">Cursos Concluídos</button>
+                -->
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+              <button class="btn-acordion accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                <i class="icones bi bi-cart3"></i>Vendas
+              </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+              data-bs-parent="#accordionFlushExample">
+              
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(9)">Nova Categoria</button>
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(10)">Novo Curso</button>
+                <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(11)">Novo Módulo</button>
+                <!--
+                <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(12)">Cursos Vendidos</button>
+                <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(13)">Relatórios</button>
+                -->
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSix">
+              <button class="btn-acordion accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                <i class="icones bi bi-key"></i>Administrador
+              </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+              data-bs-parent="#accordionFlushExample">
+              <button type="button" class="btn-opcao-navegacao btn btn-secondary"
+                onclick="LOAD_MODAL.carregarModal(14)">Acessos</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section id="exibicao-conteudo" class="amb-modal-adicionada">
+        <section id="exibicao-conteudo2" class="amb-modal-adicionada">
+          <div id="amb-exibi-conteudo">
+
+          </div>
+        </section>
+      </section>
+    </main>
+
+  </section>
+  <div id="modal_aviso" class="modal" tabindex="-1"></div>
+  
+  
+</body>
+
+</html>

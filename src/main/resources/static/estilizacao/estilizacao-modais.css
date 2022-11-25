@@ -1,0 +1,1071 @@
+.main-conteudos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.amb-modal-adicionada {
+    width: 100%;
+    height: calc(100vh - 126px);
+    overflow: auto;
+    flex-shrink: 3;
+}
+
+.progress{
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.427);
+    margin-top: 10px;
+}
+
+/*-------------------------------------estilo cabeçalhos de telas ---------------------------------------*/
+
+.tit-amb-acessado, .amb-acessos-admin-drop, .amb-opcoes-novo-modulo, .amb-acessos-curso-drop {
+    background-image: linear-gradient(to right, #030c3a, #041157);
+    width: 98%;
+    height: 70px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px black;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.tit-legenda-amb-acessado {
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+/*-------------------------------------estilo tela dasboard -> cursos em andamento ---------------------------------------*/
+
+.cursos-andamento,
+.cursos-recomendacoes-em-seguida,
+.novos-cursos-recomendacoes-em-seguida,
+.cursos-adicionados-plano-estudo,
+.cursos-finalizados,
+.cursos-conteudos-disponiveis,
+.cursos-descricao-adicionada,
+.cursos-adicionados-meus-cursos-concluidos,
+.minhas-informacoes,
+.container-relatorios,
+.container-relatorios-tabela,
+.amb-cursos-mais-vendidos,
+.amb-cursos-mais-acessados,
+.atividades-em-andamento,
+.materias-download-atividades,
+.resumos-atividades,
+.amb-acessos-admin,
+.amb-novo-curso,
+.amb-novo-modulo{
+    width: 98%;
+    background-color: #041155b0;
+    min-height: 250px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px black;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    min-height:170px;
+}
+
+.titulos-modais {
+    color: white;
+}
+
+.box,
+.box-curso-recomendado,
+.curso-plano-de-estudo,
+.curso-conteudo-formacoes,
+.cursos-concluidos,
+.cursos-mais-vendidos,
+.cursos-mais-acessados {
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 5px 10px 5px;
+    background-image: linear-gradient(to right, #030a2e, #041057be);
+    box-shadow: 0px 5px 5px black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cursos-mais-vendidos:hover{
+    background-image: linear-gradient(to right, #030a2e, #68B267);
+}
+
+.cursos-mais-acessados:hover{
+    background-image: linear-gradient(to right, #030a2e, #68B267);
+}
+
+.cursos-concluidos:hover{
+    background-image: linear-gradient(to right, #030a2e, #68B267);
+}
+
+.container-cursos-play {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+}
+
+.cursosEmAndamento,
+.cursos-recomendados,
+.cursos-plano-de-estudo {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.box-1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.box-2 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+.box-3 {
+    grid-row: 1/2;
+    grid-column: 4/5;
+}
+
+.box-4 {
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+.box-5 {
+    grid-row: 2/3;
+    grid-column: 4/5;
+}
+
+@media(max-width:850px) {
+    .box-1 {
+        grid-column: 1/5;
+        grid-row: 1/3;
+    }
+
+    .box-2 {
+        grid-row: 3/4;
+        grid-column: 1/3;
+    }
+
+    .box-3 {
+        grid-row: 3/4;
+        grid-column: 3/5;
+    }
+
+    .box-4 {
+        grid-row: 4/5;
+        grid-column: 1/3;
+    }
+
+    .box-5 {
+        grid-row: 4/5;
+        grid-column: 3/5;
+    }
+}
+
+.titulo_nome_curso_andamento {
+    margin-bottom: 2px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.box:hover {
+    color: white;
+    transition: 0.1s;
+    background-image: linear-gradient(to right, #030a2e, #68B267);
+}
+
+.box:active {
+    box-shadow: 0px 3px 0px #68B267;
+}
+
+.indicador-progresso {
+    margin-bottom: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.registro-ultimo-acesso {
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.registro-ultimo-acesso p {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: white;
+    font-size: 12px;
+}
+
+/*-------------------------------------estilo tela dasboard -> Recomendações em Seguida ---------------------------------------*/
+.opcao-curso-recomendado {
+    text-decoration: none;
+    color: white;
+}
+
+.opcao-curso-recomendado:hover {
+    color: white;
+}
+
+.owl-carousel .owl-stage {
+    padding-bottom: 10px;
+}
+
+.owl-nav {
+    display: none;
+}
+
+/*-------------------------------------estilo tela dasboard -> Recomendações em Seguida tabela ---------------------------------------*/
+
+.curso-novo {
+    max-width: 320px;
+    margin-right: 10px;
+}
+
+.lista-cursos-novos {
+    flex: 1 1 250px;
+    background-image: linear-gradient(to right, #030a2e, #041057be);
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px black;
+    padding: 5px;
+}
+
+.curso-novo:hover {
+    background-image: linear-gradient(to right, #030a2e, #68B267);
+}
+
+.links-cursos-novos {
+    display: flex;
+    max-height: 250px;
+    overflow: auto;
+    flex-wrap: wrap;
+    padding: 5px 15px;
+    transition: 0.5s;
+}
+
+.links-cursos-novos ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 10px;
+}
+
+.links-cursos-novos ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    border-bottom: 3px solid #68b2674f;
+}
+
+.links-cursos-novos ul li {
+    margin: 0 20px 12px 40px;
+}
+
+.links-cursos-novos ul li a:hover {
+    background-image: linear-gradient(to right, #020824, #68b267a9);
+    transition: 0.7s;
+}
+
+.container-lista-links-cursos-novos {
+    display: flex;
+    margin-top: 10px;
+}
+
+@media(max-width:880px) {
+
+    .links-cursos-novos ul li {
+        margin: 0 0px 12px 10px;
+    }
+}
+
+
+@media(max-width:750px) {
+    .container-lista-links-cursos-novos {
+        display: unset;
+        transition: 0.15s;
+    }
+
+    .amb-descricao-cursos-adicionados {
+        flex-direction: column-reverse;
+    }
+
+    .amb-descricao-cursos-adicionados .descricao-curso {
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .curso-novo {
+        max-width: 100%;
+        margin: auto;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .links-cursos-novos ul li {
+        margin: 0 0px 12px 20px;
+    }
+
+    .links-cursos-novos {
+        margin-bottom: 10px;
+    }
+}
+
+/*-------------------------------------estilo tela planos de estudo -> cursos em andamento ---------------------------------------*/
+
+.curso-plano-de-estudo:hover {
+    background-image: linear-gradient(to right, #030a2e, #68B267);
+}
+
+.container-planos-de-estudos,
+.container-cursos-finalizados,
+.container-cursos-play-meus-cursos,
+.container-cursos-conteudos-disponiveis,
+.container-meus-cursos-concluidos,
+.container-cursos-mais-vendidos,
+.container-cursos-mais-acessados{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+}
+
+@media(max-width:700px) {
+    .container-planos-de-estudos,
+    .container-cursos-finalizados,
+    .container-cursos-play-meus-cursos,
+    .container-cursos-conteudos-disponiveis,
+    .container-meus-cursos-concluidos,
+    .container-cursos-mais-vendidos,
+    .container-cursos-mais-acessados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.btn-form-criar-plano {
+    margin-left: 5px;
+    min-width: 10%;
+}
+
+.inputs-novo-plano, .input-cadastro-usuario, .input-data-relatorio, .input-cad-key-admin, .input-novo-curso, .form-input-entrada-curso, .input-inf-curso {
+    background-color: #041155;
+    border: none;
+    color: white;
+}
+
+.input-cad-key-admin, .input-inf-curso{
+    margin-top: 10px;
+}
+
+.input-novo-curso{
+    margin-bottom: 10px;
+}
+
+.inputs-novo-plano:hover{
+    border: 1px solid #68b26788;
+}
+
+
+
+.amb-bot-cadastrar-usuario{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.input-cad-usuario{
+    width: 50%;
+}
+
+#input-cad-usuario{
+    margin-left: 10px;
+}
+
+#imagem-abertura-curso-atividade{
+    width: 420.27px;
+}
+
+@media(max-width:700px){
+
+    #imagem-abertura-curso-atividade{
+        width: 100%;
+    }
+
+    .amb-bot-cadastrar-usuario{
+        display:initial;
+    }
+    .input-cadastro-usuario{
+        width: 100%;
+    }
+
+    #input-cad-usuario{
+        margin-left: 0px;
+    }
+
+    .btn-editar-usuario {
+        margin-top: 10px;
+    }
+}
+
+.inputs-novo-plano:focus {
+    background-image: linear-gradient(to right, #02071f, #041157);
+    color: white;
+    border: 3px solid #041155;
+    transition: 0.6s;
+}
+
+.input-cadastro-usuario:focus {
+    background-image: linear-gradient(to right, #02071f, #041157);
+    color: white;
+    border: 3px solid #041155;
+    transition: 0.6s;
+}
+
+.input-data-relatorio:focus {
+    background-image: linear-gradient(to right, #02071f, #041157);
+    color: white;
+    border: 3px solid #041155;
+    transition: 0.6s;
+}
+
+.input-cad-key-admin:focus{
+    background-image: linear-gradient(to right, #02071f, #041157);
+    color: white;
+    border: 3px solid #041155;
+    transition: 0.6s;
+}
+
+.input-inf-curso:focus{
+    background-image: linear-gradient(to right, #02071f, #041157);
+    color: white;
+    border: 3px solid #041155;
+    transition: 0.6s;
+}
+
+.input-inf-curso2:focus{
+    background-image: linear-gradient(to right, #02071f, #041157);
+    color: white;
+    border: 3px solid #041155;
+    transition: 0.6s;
+}
+
+.input-inf-curso2{
+    background-image: linear-gradient(to right, #030c3a, #041157);
+    color: white;
+}
+
+.input-novo-curso:focus{
+    background-image: linear-gradient(to right, #02071f, #041157);
+    color: white;
+    border: 3px solid #041155;
+    transition: 0.6s;
+}
+
+.form-input-entrada-curso:focus{
+    background-image: linear-gradient(to right, #02071f, #041157);
+    color: white;
+    border: 3px solid #041155;
+    transition: 0.6s;
+}
+
+.input-cadastro-usuario:hover{
+    border: 1px solid #68b26788;
+}
+
+.input-data-relatorio:hover{
+    border: 1px solid #68b26788;
+}
+
+.input-cadastro-usuario{
+    margin-top: 10px;
+}
+
+.btn-editar-usuario, .btn-gera-relatorio{
+    min-width: 10%;
+    margin-left: 5px;
+}
+
+/*------------------------------------ tela de conteúdos -> formações-------------------------------*/
+
+.amb-descricao-cursos-adicionados{
+    display: flex;
+}
+
+.descricao-curso{
+    padding: 10px;
+    flex: 1 1 50%;
+    background-image: linear-gradient(to right, #02071f, #041157);
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px black;
+}
+
+.curso-adicionado-descricao-curso{
+    flex: 1 1 200px;
+}
+
+.btn-comprar-curso{
+    border-radius: 5px;
+    width: 100%;
+    padding: 18px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tit-amb-acessado-comprar-curso{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.informacoes-gerais-compra-curso{
+    list-style-type: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+
+.curso-conteudo-formacoes{
+    cursor: initial;
+}
+
+.accordion-grade-curricular-btn {
+    background-image: linear-gradient(to right, #02071f, #68b267, #041157);
+    color: white;
+    font-weight: bold;
+    border:1px solid #68b267;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.accordion-grade-curricular-btn:hover{
+    border: 2px solid #68b267;
+}
+
+.lista-materias-grade-curricular ul{
+    list-style-type: none;
+    padding-left: 0;
+    color: white;
+}
+
+.lista-materias-grade-curricular li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #68b26760;
+}
+
+.lista-materias-grade-curricular p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+/*------------------------------------ tela de relatórios calendário e inputs -------------------------------*/
+
+.ui-datepicker .ui-datepicker-title{
+    background-image: linear-gradient(to right, #030c3a, #041157);
+    border: 1px solid #555;
+    color: #EEE;
+ }
+ 
+ .ui-datepicker-calendar{
+     background-image: linear-gradient(to right, #030c3a, #041157);
+ }
+ 
+ .ui-datepicker-calendar th{
+     color: white;
+ }
+ 
+ .ui-datepicker-div{
+     background-color: #02071f;
+ }
+ 
+ .navbar-opcoes-relatorio{
+     background-image: linear-gradient(to right, #030c3a, #041157);
+     border-radius: 5px;
+     margin-bottom: 15px;
+     list-style-type: none;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-auto-rows: minmax(58px,auto);
+     grid-gap:10px;
+ }
+ 
+ .btn-dropdown-opcoes-relatorio{
+     color: white;
+     min-height: 58px;
+     margin: 10px 10px 10px 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 5px;
+ }
+ 
+.select-relatorios{
+    background-color:#0069d9;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 20px;
+    border: transparent;
+    cursor: pointer;
+}
+
+select .option-select-relatorio{
+   font-size: 20px;
+}
+
+/*----------------------------------- tabela de relatórios---------------------------*/
+
+.tabela-resultado-relatorio{
+    padding: 10px;
+    height: 500px;
+    overflow: auto;
+    box-shadow: inset 0 0 1em rgb(0, 0, 0);
+}
+
+#amb-tabela-relatorio{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(165px, auto);
+    grid-gap:10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+@media(max-width:1000px){
+    #amb-tabela-relatorio{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(max-width:700px){
+    #amb-tabela-relatorio{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+.box-tabela ul{
+    margin-bottom: 0;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.box-tabela{
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #030c3a, #041157);
+    color: white;
+    box-shadow: 0px 5px 5px black;
+    min-height: 165px;
+}
+
+/*------------------------------------- footer ---------------------------------------*/
+
+footer {
+    width: 100%;
+    min-height: 250px;
+    background-image: linear-gradient(to right, #030a2e, #041157);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.listas-footer {
+    list-style-type: none;
+    padding-left: 0;
+    display: inline;
+    align-items: center;
+    height: auto;
+    padding: 10px 10px;
+}
+
+
+#amb-text-footer p,
+#logo-footer h4,
+#logo-footer p,
+#amb-list-icons-siga p {
+    margin-bottom: 0;
+}
+
+#logo-footer h4 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    margin-top: -5px;
+}
+
+#logo-footer p {
+    font-weight: bold;
+
+}
+
+#amb-text-footer {
+    margin: 0 20px 0 20px;
+}
+
+@media(max-width:780px) {
+    #amb-text-footer {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+#logo-footer {
+    display: flex;
+    flex-direction: unset;
+}
+
+.list-logotipo,
+#amb-text-footer,
+#amb-list-icons-siga {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#amb-list-icons-siga {
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.list-icons a {
+    font-size: 40px;
+    color: white;
+    margin-top: -30px;
+    font-weight: bold;
+}
+
+.list-icons {
+    margin-top: -30px;
+}
+
+#icon-face:hover {
+    color: #3B5998;
+}
+
+#icon-insta:hover {
+    background-image: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*-------------------------------cursos play em curso----------------------------*/
+
+.amb-atividades-em-andamento-play{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    grid-gap:10px;
+    padding: 15px 15px;
+    background-image: linear-gradient(to right, #030c3a, #041157);
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px black;
+}
+
+
+.cursos-atividades-play{
+    
+    border-radius: 5px;
+}
+
+.box-antividades-play-1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    
+}
+
+
+.box-antividades-play-2{
+    padding: 10px 10px;
+    grid-column: 2/4;
+    
+}
+
+@media(max-width:1250px){
+    
+}
+
+.btn-prox-atividade{
+    width: 100%;
+    height: 80px;
+    font-weight: bold;
+}
+
+.btn-dropdown-opcoes{
+    color: white;
+    background-color: #0d6efd;
+    height: 72px;
+    font-weight: bold;
+    cursor: pointer;
+    border: transparent;
+}
+
+.progress-curso-atividade{
+    margin-top: 10px;
+}
+
+.nome-progress-atividade{
+    color: white;
+}
+
+@media(max-width:700px){
+    .tela-video-play-atividades{
+        height: 400px;
+    }
+}
+
+#ytplayer{
+    border-radius: 5px;
+    width: 100%;
+    height: 450px;
+}
+
+.amb-video-atividades-em-andamento-play{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: minmax(370px, auto);
+    grid-gap:10px;
+    margin-top: 10px;
+    background-image: linear-gradient(to right, #030c3a, #041157);
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+.amb-resumo-atividade-text{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.amb-video-atividade{
+    grid-column: 2/5;
+    grid-row: 1/2;
+}
+
+.amb-resumo-atividade-text{
+    background-color: #22284b;
+    color: white;
+    height: 450px;
+    overflow: auto;
+    word-break: break-all;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+@media(max-width:1000px){
+    .amb-video-atividades-em-andamento-play{
+        display: flex;
+        flex-direction: column-reverse;
+        transition: 0.6s;
+    }
+    .amb-resumo-atividade-text{
+        height: 150px;
+        margin-left: 0;
+    }
+}
+
+.list-itens-download-atividades{
+    color: white;
+    margin-bottom: 0;
+}
+.list-itens-download-atividades li{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.btn-opcoes-cad-usuario{
+    padding: 10px 50px;
+    background-color:#0069d9;
+    color: white;
+}
+
+.btn-opcoes-cad-usuario:hover{
+    color: white;
+}
+
+.drop-menu-cad-admin, .drop-menu-curso-novo {
+    background-color:#0069d9;
+}
+
+.drop-menu-cad-admin li a{
+    color: white;
+    border-bottom: 1px solid #68b267;
+    padding: 15px 20px;
+    font-family: 'Segoe UI';
+}
+
+.drop-menu-curso-novo li a{
+    color: white;
+    border-bottom: 1px solid #68b267;
+    padding: 15px 20px;
+    font-family: 'Segoe UI';
+    width: 180px;
+}
+
+.drop-menu-cad-material-curso {
+    background-color:#0069d9;
+}
+
+.drop-menu-cad-material-curso li a{
+    color: white;
+    border-bottom: 1px solid #68b267;
+    padding: 15px 20px;
+    font-family: 'Segoe UI';
+}
+
+.amb-select-cat-curso{
+    display: flex;
+    justify-content: space-around;
+}
+
+.selects-cat-curso, .selects-cat-modulos{
+    margin-top: 10px;
+    background-color:#0069d9;
+    color: white;
+    cursor: pointer;
+    border: transparent;
+}
+
+@media(max-width:700px){
+    .amb-select-cat-curso{
+        display: unset;
+    }
+
+    .selects-cat-curso, .selects-cat-modulos{
+        margin-right: 0;
+    }
+}
+
+.amb-upload-curso{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: minmax(300px, auto);
+    grid-gap:10px;
+}
+
+.box-upload{
+    border-radius: 10px;
+}
+.box-upload1{
+    grid-column: 1/2;
+    min-width: 400px;
+}
+
+@media(max-width:500px){
+    .box-upload1{
+        grid-column: 1/2;
+        min-width: unset;
+    }
+}
+
+.box-upload2{
+    grid-column: 2/4;
+    padding: 10px 10px;
+    color: white;
+}
+
+.imagem-fundo-curso{
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+@media(max-width:850px){
+    .amb-upload-curso{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+.progress-bar{
+    background-color: #68B267;
+}
+
+/*------------------------------------ form login -------------------------------------------*/
+
+
+
+.form-login-user{
+    width: 30%;
+    min-width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #04115554;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px black;
+}
+
+@media(max-width:410px){
+    .form-login-user{
+        min-width: 350px;
+    }
+}
+
+@media(max-width:310px){
+    .form-login-user{
+        min-width: 270px;
+        padding: 20px 5px;
+    }
+}
+
+.amb-svg-login{
+    background-color: #020824;
+    width: 50px;
+    color: rgba(255, 255, 255, 0.308);
+    font-size: 33px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.amb-logo-form-email-login{
+    text-align: center; 
+    font-size: 120px; 
+    color: #041155; 
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.747);
+}
+
+@media(max-width:450px){
+    .amb-logo-form-email-login{
+        font-size: 100px;
+    }
+}
+
+@media(max-width:350px){
+    .amb-logo-form-email-login{
+        font-size: 80px;
+    }
+}
+
+@media(max-width:320px){
+    .form-login-user{
+        min-width: 300px;
+        padding: 10px 5px;
+    }
+}
+
+@media(max-width:280px){
+    .form-login-user{
+        min-width: 260px;
+        padding: 10px 5px;
+    }
+    .amb-logo-form-email-login{
+        font-size: 70px;
+    }
+}

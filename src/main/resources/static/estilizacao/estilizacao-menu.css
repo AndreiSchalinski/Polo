@@ -1,0 +1,390 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #68B267;
+
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(40deg, #B3B1B3 14%, #ffffff57 64%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(40deg, #8C8A8C 14%, #ffffff57 64%);
+}
+
+::-webkit-scrollbar-track {
+  background: #041155;
+  box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+
+/*-----------------------CABEÇALHO LOGO-----------------------*/
+
+#amb-frase-motivacional {
+  display: flex;
+  justify-content: center;
+  background-color: #041155;
+  color: white;
+  font-size: 21px;
+  height: 36px;
+  width: 100%;
+}
+
+#amb-frase-motivacional p {
+  margin-bottom: 0;
+  font-family: 'Dancing Script', cursive;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(to right, #030c3a, #041157);
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px -5px 20px #061c8a;
+}
+
+.amb-logoCompletoEditora {
+  background-color: #040D41;
+  width: 260px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lista-cabecalho-editora img {
+  width: 65px;
+  height: 45px;
+  margin-left: 6px;
+  margin-top: 12px;
+}
+
+.lista-cabecalho-editora {
+  list-style-type: none;
+  padding-left: 0;
+  color: white;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lista-cabecalho-editora li h4 {
+  margin: -8px 0 0 10px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.lista-cabecalho-editora li p {
+  margin: -8px 0 0 7.5px;
+  font-size: 14px;
+  margin-left: 26px;
+  font-weight: bold;
+}
+
+/*---------------------dropdown----------------------------*/
+
+.dropdown-perfil {
+  padding: 5px 5px;
+  background-color: #041155;
+  width: 100%;
+}
+
+.btn-perfil {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  padding: 5px 5px;
+}
+
+.btn-perfil:hover {
+  color: white;
+}
+
+.dropdown-menu-perfil {
+  background-color: #041155;
+  width: auto;
+  box-shadow: 1px 10px 10px black;
+}
+
+.btn-opcoes-dropdown {
+  width: 100%;
+  color: white;
+  border-bottom: 1px solid #85d88450;
+  border-radius: unset;
+  font-size: 15px;
+}
+
+.btn-opcoes-dropdown:hover {
+  color: white;
+}
+
+/*-------------------- botão hamburguer -------------------------*/
+
+#btn-mobile {
+  font-size: 1rem;
+  background: none;
+  cursor: pointer;
+  margin: 0 5px 0 5px;
+  border: 3px solid #081b85;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 4px 4px;
+}
+
+.amb-botao-hamburguer {
+  color: white;
+  list-style-type: none;
+  display: flex;
+}
+
+.amb-botao-hamburguer li h3 {
+  font-size: 18px;
+  margin: 10px 5px 0 60px;
+}
+
+#hamburguer {
+  border-top: 4px solid white;
+  width: 28px;
+}
+
+#hamburguer::after,
+#hamburguer::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  border-top: 4px solid white;
+  margin-top: 5px;
+  transition: .5s;
+  position: relative;
+}
+
+#hamburguer.ativar {
+  border-top-color: transparent;
+}
+
+#hamburguer.ativar::before {
+  transform: rotate(135deg);
+}
+
+#hamburguer.ativar::after {
+  transform: rotate(-135deg);
+  top: -9px;
+}
+
+/*------------------------- nav ---------------------------*/
+
+.nav {
+  display: none;
+  width: 295px;
+  height: calc(100vh - 126px);
+  background-color: #040D41;
+  box-shadow: 0px 1px 5px #061c8a;
+  flex-shrink: 1;
+  overflow: auto;
+}
+
+.btn-acordion {
+  background-color: #040D41;
+  color: white;
+  border-radius: unset;
+  border-bottom: 2px solid #85d88421;
+  font-weight: bold;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-acordion:hover {
+  background-color: rgba(255, 255, 255, 0.171);
+}
+
+.accordion-button::after {
+  background-color: white;
+  border-radius: 5px;
+  color: white;
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform .2s ease-in-out;
+}
+
+.accordion-button:not(.collapsed) {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.171);
+}
+
+.accordion-item {
+  border-bottom: #85d884;
+  border-top: none;
+  background-color: #040D41;
+}
+
+.btn-opcao-navegacao {
+  width: 100%;
+  height: 65px;
+  border-radius: unset;
+  background-color: #041155;
+  border: unset;
+  font-weight: bold;
+  border-bottom: 2px solid #85d88421;
+}
+
+.btn-opcao-navegacao:hover {
+  background-color: rgba(255, 255, 255, 0.171);
+}
+
+.btn-opcao-navegacao:active {
+  background-color: #68B267;
+  transition: .0s;
+  color: #040D41;
+}
+
+.icones {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.token-user{
+  margin:0;
+}
+/*----------------------------------------------- ambiente usuário logado dropdown------------------------------------------------*/
+
+.amb-dados-usuario {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#imagem-usuario-logado {
+  border-radius: 60px;
+  height: 62px;
+  width: 60px;
+  margin-left: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.164);
+}
+
+.amb-usuario-logado {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  padding-right: 10px;
+}
+
+.btn-config-usuario {
+  padding: 0px 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 175px;
+  margin-left: 3px;
+  align-items: center;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #040D41;
+}
+
+.btn-config-usuario:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.171);
+}
+
+.dropdown-opcoes {
+  background-color: #040D41;
+  box-shadow: 0px 3px 5px #030c3a;
+}
+
+.dropdown-item {
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+#btn-form-login{
+  color: white; 
+  background-color: #041155;  
+  width: 200px; 
+  margin: 0 10px 0 10px; 
+  height: 48px; 
+  font-weight: bold; 
+  text-shadow: 0px 5px 7px rgba(255, 255, 255, 0.521);
+  box-shadow: inset 0 0 0.2em white;
+  white-space: nowrap;
+}
+#btn-form-login:hover{
+  background-color: white;
+  color: #041155;
+  box-shadow: inset 0 0 0.5em #041155;  
+}
+
+.btn-access{
+  height: 60px; 
+  font-weight: bold; 
+  background-color: #020824;
+}
+
+.btn-access:hover{
+  background-color: white;
+  color: white;
+  box-shadow: inset 0 4em 2em #020824;
+  font-weight: bold;
+  transition: .5s;
+}
+
+/*---------------------------------- tela login ----------------------------------------*/
+
+@media(min-width:800px){
+  .amb-btn-menu-login{
+    display: none;
+  }
+}
+
+#tit-curso-modais1,
+#tit-curso-modais2,
+#tit-curso-modais3,
+#pre-req-curso,
+.informacoes-gerais-curso{
+  word-break: break-all;
+}
+
+.amb-opcoes-tela-login{
+  display: flex;
+  width: 100%;
+}
+
+@media(max-width:800px){
+  .amb-opcoes-tela-login{
+    display: none;
+  }
+
+  .amb-login-opcoes{
+    justify-content: right;
+  }
+
+  .amb-btn-menu-login{
+    display: flex;
+  }
+}

@@ -1,0 +1,79 @@
+<script>
+    $("#lista-atividades-modulo-aula").change(function () { var id_modulo = ($(this).val()); CURSO_ATIVIDADE.carregarInformacoesCursoAtividadeAulas(id_modulo) });
+    //CURSO_ATIVIDADE.carregarInformacoesCursoAtividade("+cod_curso+")
+</script>
+<div class="tit-amb-acessado">
+    <h1 class="tit-legenda-amb-acessado">Atividades</h1>
+    <p id="cod-curso-atividade" style="display: none;"></p>
+</div>
+
+<div class="atividades-em-andamento">
+    <div class="amb-atividades-em-andamento-play">
+        <div class="box-antividades-play-1">
+            <h5 id="curso-atividade-atual" class="nome-progress-atividade"></h5>
+            <img id="imagem-abertura-curso-atividade" class="cursos-atividades-play" alt="imagem de curso em andamento">
+            <div class="progress-curso-atividade progress">
+                <div id="progress-andamento-curso" class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+            </div>
+        </div>
+
+        <div class="box-antividades-play-2" style="color: white; height: 370px; overflow: auto;">
+            <h4 style="color: white; font-weight: bold;" id="tit-resumo-aula"><p>Para iniciar o curso você deve selecionar uma aula e seguir seu aprendizado na sequências em que foram disponibilizadas.</p></h4>
+            <p id="texto-aula-atual" style='padding:10px 10px; border-radius:5px; margin: 0 5px 0 0; text-align: justify;'>
+                
+            </p>
+        </div>
+    </div>
+    <div class="amb-video-atividades-em-andamento-play">
+        <div
+            style="display: inline; font-weight: bold; border-radius: 5px; padding: 5px 5px; background-image: linear-gradient(to right, #02071f, #041157);">
+            <p style="color: white; text-transform: uppercase; margin-bottom: -10px;">INFORMAÇÕES DA AULA</p>
+            <hr style="color: white; border: 1px solid #68b267;">
+            <p style="color: white; text-transform: uppercase;" id="aula-atual-atividade">NOME:</p>
+            <p style="text-transform: uppercase;color: white;" id="status-atividade-feita">STATUS AULA:</p>
+            <p style="text-transform: uppercase;color: white;" id="status-curso-concluida">STATUS CURSO:</p>
+            <hr style="color: white; border: 1px solid #68b267;">
+            <p style="color: white;">MATERIAIS PARA DOWNLOAD:</p>            
+            <ul style="list-style: none;margin-top: 30px; padding:5px 15px 0 10px; margin-top: 15px; height: 200px; overflow: auto;" id="lista-materiais-aulas"
+                class="list-itens-download-atividades"></ul>
+        </div>
+
+
+        <div class="amb-video-atividade">
+            <div class="dropdown">
+                <button style="width: 100%; margin-bottom: 10px; font-size: 15px; font-weight: bold;"
+                    class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    SELECIONE AULA
+                </button>
+                <ul id="lista-de-aulas-atividades" class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
+                    style="width: 100%;"></ul>
+            </div>
+            
+            <video id="aula-atividade-video" width="100%" height="451" controls="controls"></video>
+            <div style="display: none;" class="info-aula"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/polo/script/script-sections-load.js"></script>
+<script src="/polo/script/owlCarousel.js"></script>
+<script>
+    var video = document.getElementById("aula-atividade-video")
+    video.onended = function () {
+        var infoVideo = document.getElementsByClassName("info-aula")
+
+        var confirm = false;
+
+        if (video.ended) {
+            confirm = 'true'
+        }
+
+        CURSO_ATIVIDADE.validarTerminoDaAula(infoVideo[0].textContent, confirm)
+    }
+
+</script>
+<footer>
+
+</footer>
